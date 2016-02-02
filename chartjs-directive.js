@@ -39,6 +39,7 @@ angular.module('chartjs-directive', []).
           chart[chartType](scope.chartObject.data, scope.chartObject.options);
           if (scope.chartInstance) scope.chartInstance.destroy();
           scope.chartInstance = chart[chartType](scope.chartObject.data, scope.chartObject.options);
+          element.append(scope.chartInstance.generateLegend());
         }, true);
       }
     }
